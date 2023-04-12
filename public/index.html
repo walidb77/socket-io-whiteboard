@@ -2,8 +2,17 @@
 <html>
   <head>
     <title>Socket.io Whiteboard</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <canvas id="canvas"></canvas>
+    <div id="btn-container">
+      <div id="clear-btn">Clear</div>
+      <div class="color-btn" style="background-color: black"></div>
+      <div class="color-btn" style="background-color: red"></div>
+      <div class="color-btn" style="background-color: green"></div>
+      <div class="color-btn" style="background-color: blue"></div>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="client.js"></script>
   </body>
