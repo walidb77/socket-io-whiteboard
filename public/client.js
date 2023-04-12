@@ -3,12 +3,18 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const clearBtn = document.getElementById("clear-btn");
 const colorBtn = document.querySelectorAll(".color-btn");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 let lastX = 0;
 let lastY = 0;
 let isDrawing = false;
 let color = "black";
+
+// Resize window
+function resize () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
 
 // Color choice
 colorBtn.forEach(btn => {
